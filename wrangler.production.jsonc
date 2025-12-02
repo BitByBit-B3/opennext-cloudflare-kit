@@ -1,0 +1,42 @@
+{
+  "name": "b3-opennext-prod",
+  "compatibility_date": "2024-11-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": ".open-next/worker.js",
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "b3-db-prod",
+      "database_id": "YOUR_PROD_D1_DATABASE_ID"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "R2_STORAGE",
+      "bucket_name": "b3-storage-prod"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "CACHE_KV",
+      "id": "YOUR_PROD_KV_ID"
+    }
+  ],
+  "vars": {
+    "ENVIRONMENT": "production",
+    "R2_PUBLIC_URL": "https://storage.yourdomain.com"
+  },
+  "routes": [
+    {
+      "pattern": "your-domain.com",
+      "custom_domain": true
+    }
+  ]
+}

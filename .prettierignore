@@ -1,0 +1,10 @@
+node_modules
+.next
+.open-next
+.wrangler
+dist
+build
+coverage
+*.log
+.env*
+bun.lockb
