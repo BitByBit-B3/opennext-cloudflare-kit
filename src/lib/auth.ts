@@ -10,11 +10,12 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
   },
-  socialProviders: {
-    github: {
-      clientId: process.env.GITHUB_CLIENT_ID || "",
-      clientSecret: process.env.GITHUB_CLIENT_SECRET || "",
-    },
+  advanced: {
+    cookiePrefix: "opennext-template-kit",
+    useSecureCookies: true,
+  },
+  session: {
+    cookieCache: { enabled: true, strategy: "jwt" },
   },
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.BETTER_AUTH_URL,

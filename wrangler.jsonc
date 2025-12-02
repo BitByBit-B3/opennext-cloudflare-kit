@@ -5,32 +5,32 @@
   "main": ".open-next/worker.js",
   "assets": {
     "directory": ".open-next/assets",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
   },
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "b3-db-dev",
-      "database_id": "YOUR_DEV_D1_DATABASE_ID"
-    }
+      "database_id": "YOUR_DEV_D1_DATABASE_ID",
+    },
   ],
   "r2_buckets": [
     {
       "binding": "R2_STORAGE",
-      "bucket_name": "b3-storage-dev"
-    }
+      "bucket_name": "b3-storage-dev",
+    },
   ],
   "kv_namespaces": [
     {
       "binding": "CACHE_KV",
-      "id": "YOUR_DEV_KV_ID"
-    }
+      "id": "9fe37b7c4e374f41995437edd1f7a2be",
+    },
   ],
   "vars": {
     "ENVIRONMENT": "development",
-    "R2_PUBLIC_URL": "https://storage-dev.yourdomain.com"
-  }
+    "R2_PUBLIC_URL": "https://storage-dev.yourdomain.com",
+  },
 }
